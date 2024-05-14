@@ -1,0 +1,259 @@
+
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+    <title>
+        home
+    </title>
+    <style>
+        header{
+            
+            font-size:33px;
+            color:dark;
+            background-color:blue;
+            height:25vh;
+            text-align:center;
+            
+        }
+       
+       .column1{
+           
+            float:left;
+            width:20%;
+            
+            padding:10px;
+            background-color:;
+            
+            text-color:white;
+            text_decoration:None;
+            height:100px;
+            width:90vh;
+            
+           
+            
+            text-align:none;
+            
+            
+            
+        }
+     
+        .column2{
+           
+            float:left;
+            width:20%;
+            
+            padding:10px;
+            background-color:;
+            
+            text-color:white;
+            text_decoration:None;
+            height:150px;
+            width:90vh;
+           
+            text-align:none;
+            
+            margin-bottom:190px;
+            
+        }
+        .column3{
+           
+            float:left;
+            width:20%;
+            
+            padding:10px;
+            background-color:;
+            
+            text-color:white;
+            text_decoration:None;
+            height:100px;
+            width:90vh;
+            
+           
+            
+            text-align:none;
+            
+            
+            
+        }
+        .column4{
+           
+            float:left;
+            width:20%;
+            
+            padding:10px;
+            background-color:;
+            
+            text-color:white;
+            text_decoration:None;
+            height:100px;
+            width:90vh;
+            
+           
+            
+            text-align:none;
+            
+            
+            
+        }
+        .column5{
+           
+            float:left;
+            width:20%;
+            
+            padding:10px;
+            background-color:;
+            
+            text-color:white;
+            text_decoration:None;
+            height:100px;
+            width:90vh;
+            
+           
+            
+            text-align:none;
+            
+            
+            
+        }
+     
+     
+     
+        button{
+            height:5vh;
+            width:130px;
+            padding:0px;
+            border:2px solid #f0f0f0;
+
+        }
+       
+        p1{
+            
+        font-size:25px;
+        
+        color:green;
+       
+
+        }
+        td{
+            background-color:#9d9d9d
+        }
+     
+        
+        
+
+    </style>
+    </head>
+    <body>
+        <header>Jamhuri ya Muungano wa Tanzania
+            <p> WIZARA YA ELIMU, SAYANSI NA TEKNOLOJIA</p></header>
+            <br>
+            <br>
+       <form action="{%url 'applicantinfo'%}" method="GET" enctype="multipart/form-data"> 
+          {% csrf_token%}
+          
+          <div class="column1">
+          <table border="2">
+            
+            <tr>
+                <td>APPLICANT INFORMATION </td>
+            </tr>
+          {% for dt in data1 %}
+          
+            <tr>
+                <td>first_name</td><td>middle_name</td><td>last_name</td><td>date_of_birth</td><td>home_address</td><td>pyhsical_address</td><td>phone_number</td>
+
+            </tr>
+            <tr>
+          <td>{{dt.first_name}}</td><td>{{dt.midle_name}}</td><td>{{dt.last_name}}</td><td>{{dt.date_of_birth}}</td><td> {{dt.home_address}}</td> <td>{{dt.physical_address}}</td><td>{{dt.phone_number}}</td>
+            </tr>
+          {% endfor %}
+        </table>
+        </div>
+ 
+        <div class="column2">
+        <table border="2">
+       
+       
+          <tr>
+            <td>NEXT OF KIN INFORMATION 1 </td>
+        </tr>
+
+            {% for dt in data2 %}
+            
+              <tr>
+                  <td>first_name</td><td>middle_name</td><td>last_name</td><td>home_address</td><td>pyhsical_address</td><td>phone_number</td>
+  
+              </tr>
+              <tr>
+            <td>{{dt.first_name}}</td><td>{{dt.midle_name}}</td><td>{{dt.last_name}}</td><td> {{dt.home_address}}</td> <td>{{dt.physical_address}}</td><td>{{dt.phone_number}}</td>
+              </tr>
+            {% endfor %}
+            </table>
+            </div>
+            <div class="column3">
+                <table border="2">
+                   
+                   
+                      <tr>
+                        <td>NEXT OF KIN INFORMATION 2 </td>
+                    </tr>
+            
+                        {% for dt in data3 %}
+                        
+                          <tr>
+                              <td>first_name</td><td>middle_name</td><td>last_name</td><td>home_address</td><td>pyhsical_address</td><td>phone_number</td>
+              
+                          </tr>
+                          <tr>
+                        <td>{{dt.first_name}}</td><td>{{dt.midle_name}}</td><td>{{dt.last_name}}</td><td> {{dt.home_address}}</td> <td>{{dt.physical_address}}</td><td>{{dt.phone_number}}</td>
+                          </tr>
+                        {% endfor %}
+                        </table>
+                        </div>
+                        <div class="column4">
+                            <table border="2">
+                               
+                               
+                                  <tr>
+                                    <td>NEXT OF KIN INFORMATION 3</td>
+                                </tr>
+                        
+                                    {% for dt in data4 %}
+                                    
+                                      <tr>
+                                          <td>first_name</td><td>middle_name</td><td>last_name</td><td>home_address</td><td>pyhsical_address</td><td>phone_number</td>
+                          
+                                      </tr>
+                                      <tr>
+                                    <td>{{dt.first_name}}</td><td>{{dt.midle_name}}</td><td>{{dt.last_name}}</td><td> {{dt.home_address}}</td> <td>{{dt.physical_address}}</td><td>{{dt.phone_number}}</td>
+                                      </tr>
+                                    {% endfor %}
+                                    </table>
+                                    </div>
+                <div class="column5">
+             <table border="2">
+            <tr>
+                <td>ATTACHMENTS </td>
+            </tr>
+    
+                {% for dt in data5 %}
+                
+                  <tr>
+                      <td>form_four_certification</td><td>Birth_certification</td><td>Parent/Guardian_NationalID_Card</td>
+      
+                  </tr>
+                  <tr>
+                <td>{{dt.Form_FOUR_certification}}</td><td>{{dt.Birth_Certification}}</td><td>{{dt.Parent_or_Guardian_NationalID_card}}</td>
+                {% endfor %}
+          </table>
+        </div >
+
+
+          
+        
+       </form>
+       
+    </body>
+
+</html>

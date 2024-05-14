@@ -1,0 +1,89 @@
+
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+    <title>
+        home
+    </title>
+    <style>
+        header{
+            
+            font-size:33px;
+            color:dark;
+            background-color:blue;
+            height:25vh;
+            text-align:center;
+            
+        }
+       
+       form {
+           
+            float:left;
+            width:60%;
+            
+            padding:10px;
+            background-color:#9d9d9d;
+            
+            text-color:white;
+            text_decoration:None;
+            height:170px;
+            width:170vh;
+            border:2px solid #f0f0f0;
+	        border-radius:5px;
+           
+            box-shadow:2px 2px 2px 2px rgb(138,137,137);
+            text-align:none;
+            margin-left:150px;
+            margin-bottom:150px;
+            
+        }
+     
+        button{
+            height:5vh;
+            width:130px;
+            padding:0px;
+            border:2px solid #f0f0f0;
+
+        }
+       
+        p1{
+            
+        font-size:25px;
+        
+        color:green;
+       
+
+        }
+       
+        #div2{
+            background-color:rgb(110,50,255);
+            border-radius:5px;
+            box-shadow:2px 2px 2px 2px rgb(0,137,0);
+        }
+     
+      
+     
+     
+
+    </style>
+    </head>
+    <body>
+        <header>Jamhuri ya Muungano wa Tanzania
+            <p> WIZARA YA ELIMU, SAYANSI NA TEKNOLOJIA</p></header>
+            <br>
+            <br>
+       <form action="" method="POST">
+        {% csrf_token%}
+       
+       <p1>Next Of Kin information 2:</p1>
+      <div id="div2"><br>
+        {{sql2}}
+        <br>
+ <button type="submit">submit</button>
+      </div>
+       </form>
+            
+    </body>
+
+</html>
